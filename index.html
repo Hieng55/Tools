@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoSell</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard"></div>
+    <div class="enter_info">
+      <form>
+        <div class="name">
+          <input class="name_company" type="text" placeholder="vui lòng nhập tên công ty " />
+        </div>
+        <!-- <div class="name">
+          <input type="text" placeholder="vui lòng nhập tên công ty " />
+        </div> -->
+        <div class="name">
+          <input class="name_product" type="text" placeholder="vui lòng nhập tên sản phẩm " />
+        </div>
+        <div class="name">
+          <input class="des_product" type="text" placeholder="vui lòng nhập mô tả sản phẩm " />
+        </div>
+
+        <div class="name">
+          <div><input type="file" id="file" /> <button id="upload">UPLOAD</button></div>
+          <img class="img_1" id="img" src="" alt="" />
+          <!-- <button type="button" class="close">Close</button> -->
+        </div>
+
+        <div class="name">
+          <input class="original_price" type="text" placeholder="vui lòng nhập giá gốc" />
+        </div>
+        <div class="name">
+          <input class="pice" type="text" placeholder="vui lòng nhập giá" />
+        </div>
+        <div class="name">
+          <input class="buy_price" type="text" placeholder="vui lòng nhập giá bán" />
+        </div>
+        <div class="name">
+          <input class="collection" type="text" placeholder="vui lòng nhập bộ sưu tập" />
+        </div>
+        <div class="name">
+          <input class="out_stock" type="text" placeholder="hiển thị khi hết hàng" />
+        </div>
+        <div class="name">
+          <input class="weight" type="text" placeholder="vui lòng nhập cân nặng" />
+        </div>
+        <div class="name">
+          <input class="length" type="text" placeholder="vui lòng nhập cân chiều dài" />
+        </div>
+        <div class="name">
+          <input class="width" type="text" placeholder="vui lòng nhập cân chiều rộng" />
+        </div>
+        <div class="name">
+          <input class="height" type="text" placeholder="vui lòng nhập cân chiều cao" />
+        </div>
+        <button onclick="handleSave()" type="button">Lưu</button>
+      </form>
+      <div class="view">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên công ty</th>
+              <th>Tên sản phẩm</th>
+              <th>Mô tả sản phẩm</th>
+              <th>Đường dẫn hình ảnh</th>
+              <th>Giá gốc</th>
+              <th>Giá</th>
+              <th>Giá bán</th>
+              <th>Bộ sưu tập</th>
+              <th>Hiển thị khi hết hàng</th>
+              <th>Cân nặng</th>
+              <th>Chiều dài</th>
+              <th>Chiều rộng</th>
+              <th>Chiều cao</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, consequuntur dicta labore perspiciatis ea officiis iste. Blanditiis, neque.
+        Dicta sapiente vitae doloribus quo illum excepturi ad nisi fuga sit adipisci!
+      </div>
+    </div>
+    <div class="popup">
+      <form>
+        <div class="name">
+          <input class="name_company" type="text" placeholder="vui lòng nhập tên công ty " />
+        </div>
+        <!-- <div class="name">
+          <input type="text" placeholder="vui lòng nhập tên công ty " />
+        </div> -->
+        <div class="name">
+          <input class="name_product" type="text" placeholder="vui lòng nhập tên sản phẩm " />
+        </div>
+        <div class="name">
+          <input class="des_product" type="text" placeholder="vui lòng nhập mô tả sản phẩm " />
+        </div>
+
+        <div class="name">
+          <div><input type="file" id="file_edit" /> <button id="upload">UPLOAD</button></div>
+          <img class="img_product" id="img_edit" src="" alt="" />
+          <!-- <button type="button" class="close">Close</button> -->
+        </div>
+
+        <div class="name">
+          <input class="original_price" type="text" placeholder="vui lòng nhập giá gốc" />
+        </div>
+        <div class="name">
+          <input class="pice" type="text" placeholder="vui lòng nhập giá" />
+        </div>
+        <div class="name">
+          <input class="buy_price" type="text" placeholder="vui lòng nhập giá bán" />
+        </div>
+        <div class="name">
+          <input class="collection" type="text" placeholder="vui lòng nhập bộ sưu tập" />
+        </div>
+        <div class="name">
+          <input class="out_stock" type="text" placeholder="hiển thị khi hết hàng" />
+        </div>
+        <div class="name">
+          <input class="weight" type="text" placeholder="vui lòng nhập cân nặng" />
+        </div>
+        <div class="name">
+          <input class="length" type="text" placeholder="vui lòng nhập cân chiều dài" />
+        </div>
+        <div class="name">
+          <input class="width" type="text" placeholder="vui lòng nhập cân chiều rộng" />
+        </div>
+        <div class="name">
+          <input class="height" type="text" placeholder="vui lòng nhập cân chiều cao" />
+        </div>
+        <button onclick="handleSaveEdit()" type="button">Lưu</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="const.js"></script>
+    <script src="util.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
